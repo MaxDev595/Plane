@@ -1,3 +1,5 @@
+import cors from 'cors';
+
 require('dotenv').config();
 const express = require('express');
 const http = require('http');
@@ -23,7 +25,7 @@ const io = new Server(server, {
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://plane-9x9mqmzvx-maxims-projects-71f5ab65.vercel.app'
+    'https://plane-fnfceczjy-maxims-projects-71f5ab65.vercel.app'
   ],
   credentials: true
 }));
