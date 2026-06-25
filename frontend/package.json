@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "postinstall": "chmod +x node_modules/.bin/tsc node_modules/.bin/vite",
+    "build": "npx tsc && npx vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -16,7 +17,10 @@
     "socket.io-client": "^4.7.2",
     "zustand": "^4.4.7",
     "clsx": "^2.1.0",
-    "emoji-mart": "^5.6.0"
+    "emoji-mart": "^5.6.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "@vitejs/plugin-react": "^4.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
