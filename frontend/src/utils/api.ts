@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://plane-afzr.onrender.com',
+  baseURL: 'https://plane-afzr.onrender.com/api',
 });
 
 api.interceptors.request.use((config) => {
