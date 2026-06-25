@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0e1117;
+  color: #e6edf3;
+  overflow: hidden;
+  height: 100dvh;
+}
+
+#root {
+  height: 100dvh;
+  display: flex;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.15s ease-out;
+}
+
+.message-enter {
+  animation: fadeIn 0.12s ease-out;
+}
+
+/* Custom focus */
+.focus-ring:focus-visible {
+  outline: 2px solid #4f8ef7;
+  outline-offset: 2px;
+}
