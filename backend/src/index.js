@@ -20,7 +20,13 @@ const io = new Server(server, {
 });
 
 // Middleware
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', credentials: true }));
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://plane-9x9mqmzvx-maxims-projects-71f5ab65.vercel.app'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Serve local uploads
